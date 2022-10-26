@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Vue Hello</title>
 </head>
 <body>
     
+    <main>
+        <div id="app">
+            <h1>{{ message }}</h1>
+            <h2>Questa è l'immagine stampata &downarrow;</h2>
+            <img :src="image" alt="">
+            <br>
+
+            <label :class="fontclass" for="number">Inserisci un numero qualsiasi </label>
+            <br>
+            <input type="number" id="number" v-model="userNumber">
+            <button  @click="OddOrEven">Sono pari o dispari ? </button>
+            <p v-bind:class="color">{{result}}</p>
+
+        </div>
+    </main>
 
 
 
-    <link rel="stylesheet" href="./js/script.js">
+    <script src="./js/script.js"></script>
 </body>
 </html>
